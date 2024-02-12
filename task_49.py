@@ -25,3 +25,15 @@ print(*find_farthest_orbit(orbits))
 2.5 10
 """
 
+orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
+orbits = [el for el in orbits if el[0] != el[1]]
+print(max(orbits, key=lambda n: 3.14*n[0]*n[1]))
+
+lst = [1, 2, 2, 3]
+print(max(lst, key=lst.count))
+
+def find_farthest_orbit(orbits):
+    orbits = [el for el in orbits if el[0] != el[1]]
+    return (max(orbits, key=lambda n: 3.14*n[0]*n[1])
+
+print(*find_farthest_orbit(orbits))
